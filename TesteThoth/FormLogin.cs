@@ -47,7 +47,23 @@ namespace TesteThoth
 
         private async void button1_Click(object sender, EventArgs e)
         {
-            
+            btnLogin.Enabled = false;
+            lblStatus.Text = "Logando…";
+            var ok = await ApiService.LoginAsync(txtNome.Text, txtSenha.Text);
+            if (ok)
+            {
+                Hide();
+                using (var main = new Dados())
+                {
+                    main.ShowDialog();
+                }
+                Close();
+            }
+            else
+            {
+                lblStatus.Text = "Login falhou";
+                btnLogin.Enabled = true;
+            }
         }
 
 

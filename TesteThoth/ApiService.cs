@@ -47,22 +47,22 @@ public static class ApiService
     }
 
     public static async Task<List<Compromisso>> GetCompromissosAsync()
-        => await _client.GetFromJsonAsync<List<Compromisso>>($"http://localhost:7160/api/Compromissos")
+        => await _client.GetFromJsonAsync<List<Compromisso>>($"https://localhost:7160/api/Compromissos")
            ?? new List<Compromisso>();
 
     public static async Task<Compromisso> CreateCompromissoAsync(Compromisso c)
     {
-        var resp = await _client.PostAsJsonAsync("http://localhost:7160/api/Compromissos", c);
+        var resp = await _client.PostAsJsonAsync("https://localhost:7160/api/Compromissos", c);
         return resp.IsSuccessStatusCode
             ? await resp.Content.ReadFromJsonAsync<Compromisso>()
             : null;
     }
 
     public static async Task<bool> UpdateCompromissoAsync(int id, Compromisso c)
-        => (await _client.PutAsJsonAsync($"http://localhost:7160/api/Compromissos/{id}", c))
+        => (await _client.PutAsJsonAsync($"https://localhost:7160/api/Compromissos/{id}", c))
             .IsSuccessStatusCode;
 
     public static async Task<bool> DeleteCompromissoAsync(int id)
-        => (await _client.DeleteAsync($"http://localhost:7160/api/Compromissos/{id}"))
+        => (await _client.DeleteAsync($"https://localhost:7160/api/Compromissos/{id}"))
             .IsSuccessStatusCode;
 }

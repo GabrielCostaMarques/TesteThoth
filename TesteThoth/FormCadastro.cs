@@ -29,10 +29,12 @@ namespace TesteThoth
 
             btnRegister.Enabled = false;
             lblStatus.Text = "Cadastrando…";
-            var ok = await ApiService.RegisterAsync(txtNome.Text, txtSenha.Text);
-            lblStatus.Text = ok ? "Cadastro OK" : "Falha no cadastro";
+            var okRegister = await ApiService.RegisterAsync(txtNome.Text, txtSenha.Text);
+            var okLogin = await ApiService.LoginAsync(txtNome.Text, txtSenha.Text);
+
+            lblStatus.Text = okRegister ? "Cadastro OK" : "Falha no cadastro";
             btnRegister.Enabled = true;
-            if (ok)
+            if (okRegister || okLogin)
             {
                 Close();
                 dados.Show();
