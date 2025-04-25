@@ -58,5 +58,14 @@ namespace TesteThoth
                 if (ok) await LoadAll();
             }
         }
+
+        private void btnLogout_Click(object sender, EventArgs e)
+        {
+            ApiService.Logout();
+            Hide();
+            var loginForm = new FormLogin();
+            loginForm.ShowDialog();
+            Close();
+        }
     }
 }

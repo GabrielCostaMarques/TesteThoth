@@ -33,6 +33,7 @@
             this.btnEditar = new System.Windows.Forms.Button();
             this.btnExcluir = new System.Windows.Forms.Button();
             this.dgvComp = new System.Windows.Forms.DataGridView();
+            this.btnLogout = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvComp)).BeginInit();
             this.SuspendLayout();
             // 
@@ -84,11 +85,22 @@
             this.dgvComp.Size = new System.Drawing.Size(468, 149);
             this.dgvComp.TabIndex = 5;
             // 
+            // btnLogout
+            // 
+            this.btnLogout.Location = new System.Drawing.Point(686, 43);
+            this.btnLogout.Name = "btnLogout";
+            this.btnLogout.Size = new System.Drawing.Size(75, 23);
+            this.btnLogout.TabIndex = 6;
+            this.btnLogout.Text = "Sair";
+            this.btnLogout.UseVisualStyleBackColor = true;
+            this.btnLogout.Click += new System.EventHandler(this.btnLogout_Click);
+            // 
             // Dados
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnLogout);
             this.Controls.Add(this.dgvComp);
             this.Controls.Add(this.btnExcluir);
             this.Controls.Add(this.btnEditar);
@@ -110,5 +122,6 @@
         private System.Windows.Forms.Button btnEditar;
         private System.Windows.Forms.Button btnExcluir;
         private System.Windows.Forms.DataGridView dgvComp;
+        private System.Windows.Forms.Button btnLogout;
     }
 }

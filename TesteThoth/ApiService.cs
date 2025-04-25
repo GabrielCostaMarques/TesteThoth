@@ -50,6 +50,14 @@ public static class ApiService
         => await _client.GetFromJsonAsync<List<Compromisso>>($"https://localhost:7160/api/Compromissos")
            ?? new List<Compromisso>();
 
+    public static void Logout()
+    {
+        JwtToken = null;
+        UserId = 0;
+        _client.DefaultRequestHeaders.Authorization = null;
+    }
+
+
     public static async Task<Compromisso> CreateCompromissoAsync(Compromisso c)
     {
         var resp = await _client.PostAsJsonAsync("https://localhost:7160/api/Compromissos", c);
