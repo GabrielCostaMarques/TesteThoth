@@ -44,7 +44,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(300, 59);
+            this.label1.Location = new System.Drawing.Point(335, 59);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(110, 22);
             this.label1.TabIndex = 0;
@@ -54,7 +54,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(300, 109);
+            this.label2.Location = new System.Drawing.Point(312, 109);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(162, 22);
             this.label2.TabIndex = 1;
@@ -97,7 +97,7 @@
             // btnRegister
             // 
             this.btnRegister.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnRegister.Location = new System.Drawing.Point(304, 328);
+            this.btnRegister.Location = new System.Drawing.Point(304, 316);
             this.btnRegister.Name = "btnRegister";
             this.btnRegister.Size = new System.Drawing.Size(181, 43);
             this.btnRegister.TabIndex = 10;
@@ -109,7 +109,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Arial Narrow", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(513, 232);
+            this.label7.Location = new System.Drawing.Point(336, 272);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(86, 16);
             this.label7.TabIndex = 11;
@@ -118,7 +118,7 @@
             // linkLogin
             // 
             this.linkLogin.AutoSize = true;
-            this.linkLogin.Location = new System.Drawing.Point(596, 235);
+            this.linkLogin.Location = new System.Drawing.Point(419, 275);
             this.linkLogin.Name = "linkLogin";
             this.linkLogin.Size = new System.Drawing.Size(35, 13);
             this.linkLogin.TabIndex = 12;
